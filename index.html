@@ -1,29 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Explicación de Protocolos</title>
-  <!-- Agrega Bootstrap CSS -->
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3HV5HzF6Gvk/e3G5mXmJL6fR3Jr59z" crossorigin="anonymous">
+    <title>Elementos de redes</title>
+    <style>
+      body {
+            background-color: #f1f1f1;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .parrafo {
+            max-width: 800px;
+            word-wrap: break-word;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .audio-player {
+            margin-top: 5px;
+        }
+
+        input[type="text"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1) inset;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            cursor: default;
+        }
+        .escondido{
+          
+  display: none;
+
+        }
+        .typewriter {
+  overflow: hidden; /* para ocultar todo el texto */
+  white-space: nowrap; /* para evitar que el texto se ajuste automáticamente */
+  border-right: solid orange 2px; /* para el efecto de "escribir" */
+  font-family: monospace; /* para el efecto de máquina de escribir */
+  font-size: 1.5em;
+  animation: typing 3s steps(30) 1s 1 normal both;
+}
+
+@keyframes typing {
+  from {
+    width: 0; /* empieza sin ancho (texto oculto) */
+  }
+  to {
+    width: 100%; /* termina con ancho completo (texto visible) */
+  }
+}
+    </style>
 </head>
 <body>
-  <div class="container">
-       <audio controls>
-        <source src="audio/protocolo.mp3" type="audio/mpeg">
-    </audio>
-   
-    <h1 class="my-4">¿Qué es un protocolo?</h1>
-    <p>Un protocolo, en términos simples, es un conjunto de reglas y pautas que ayudan a las personas, dispositivos o sistemas a comunicarse entre sí de manera efectiva. Piensa en un protocolo como las reglas de un juego o las normas de cortesía en una conversación. Al seguir estas reglas, las partes involucradas pueden entenderse y trabajar juntas de manera más fluida.</p>
 
-    <p>En el caso de las redes de informática, los protocolos aseguran que los dispositivos electrónicos, como computadoras, teléfonos móviles y otros, puedan intercambiar información de manera clara y organizada. Estas reglas establecen cómo se deben enviar, recibir y procesar los datos en una red, permitiendo que la comunicación fluya sin problemas.</p>
+    <!-- Asistencia proporcionada por ChatGPT de OpenAI -->
+    <div class="container">
+        <h2>Referencia:</h2><a href="https://www.google.com/search?q=book%3ALoshin%2C+P.+(2003).+TCP%2FIP+Clearly+Explained+(4th+ed.).+Morgan+Kaufmann+Publishers.&hl=es&ei=H2lVZM-2BZWpkdUP0PGAiAw&ved=0ahUKEwiPwpqahN_-AhWVVKQEHdA4AMEQ4dUDCA4&uact=5&oq=book%3ALoshin%2C+P.+(2003).+TCP%2FIP+Clearly+Explained+(4th+ed.).+Morgan+Kaufmann+Publishers.&gs_lcp=Cgxnd3Mtd2l6LXNlcnAQAzIHCAAQigUQQzIFCAAQgAQyDgguEIAEELEDEMcBENEDMg4ILhCABBCxAxCDARDUAjILCAAQgAQQsQMQgwEyBAgAEAMyCAgAEIAEELEDMgsILhCABBCxAxCDATIFCC4QgAQyBQgAEIAEOg0IABCPARDqAhC0AhgBOg0ILhCPARDqAhC0AhgBOhEILhCABBCxAxCDARDHARDRAzoICC4QgAQQsQM6DQgAEIoFELEDEIMBEENKBAhBGAFQwBFYmsg0YILKNGgGcAB4AYABgAWIAaYPkgEJMi0xLjIuMS4xmAEAoAEBoAECsAEKwAEB2gEECAEYCg&sclient=gws-wiz-serp&bshm=bshqp/1">Loshin, P. (2003). TCP/IP Clearly Explained (4th ed.). Morgan Kaufmann Publishers.</a>
+        <h1 class="my-4 typewriter">Elementos de redes</h1>
+        <div  class="parrafo" >
+        <p >El internet es una red; también lo es una computadora personal (PC) de escritorio conectada directamente a una laptop. Claramente, hay diferencias significativas entre los diferentes tipos de red. Un internet es una red de redes. Esta sección presenta un vocabulario para hablar sobre todos los tipos de red. Los sistemas en red a menudo se consideran conectados con la implicación de una conexión física, como la proporcionada por un cable que vincula los sistemas entre sí. El reciente auge de las tecnologías implementadas para la voz y la conexión en red de datos inalámbricos muestra que compartir una red solo requiere que los sistemas compartan un mecanismo mediante el cual puedan comunicarse.</p>
 
-    <p>Para ilustrar un ejemplo de la vida cotidiana, imagina que dos personas hablan diferentes idiomas y desean comunicarse. Si ambas conocen un tercer idioma en común, pueden utilizarlo como un "protocolo" para entenderse mutuamente. De manera similar, en el mundo de las redes de informática, los protocolos actúan como ese "idioma común" que permite a los dispositivos comunicarse de manera efectiva.</p>
-  </div>
-
-  <!-- Agrega Bootstrap y dependencias de JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>
+    </div>
+        <audio controls>
+            <source src="audio/parrafo1.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+    </div>
+    <div  class="parrafo">
+        <p>Por el momento, podemos suponer que esos sistemas utilizan el mismo canal de comunicación (cualquiera que sea) y los mismos conjuntos de reglas (cualesquiera que sean) para gobernar sus transmisiones y recepciones. Sin embargo, en cualquier red en particular, también podemos suponer que solo hay un canal y un conjunto de reglas que rigen ese canal. También habrá límites en la cantidad de datos que se pueden transmitir en el canal y cuántos sistemas pueden comunicarse a través del mismo canal.</p>
+        <audio controls>
+            <source src="audio/parrafo2.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+</div>
+<div  class="parrafo">
+        <p>Antes de continuar, se necesitan algunas definiciones:</p>
+        <ul>
+            <li>Entidad: Alguna "cosa" que hace algo. Dependiendo del contexto, una entidad puede ser una computadora, una persona, un programa, un dispositivo o un proceso. O, tal vez, algo más. "Entidad" puede referirse a algo que está a punto de ser presentado.</li>
+            <audio controls>
+                <source src="audio/entidad.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <!-- Continúa agregando los elementos de la lista y los elementos de audio correspondientes -->
+           
+                <li>Host: Una entidad que envía o recibe datos. Un host puede ser cualquier cosa, desde una PC de escritorio hasta un dispositivo móvil o una impresora. En general, un host es cualquier cosa que pueda conectarse a una red y comunicarse con otros hosts.</li>
+                <audio controls>
+                    <source src="audio/host.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <li>Nodo: Un punto de conexión en una red. Un nodo puede ser cualquier cosa, desde una PC de escritorio hasta un servidor o un dispositivo de red. Un nodo es esencialmente cualquier cosa que pueda conectarse a una red y que tenga una dirección IP única.</li>
+                <audio controls>
+                    <source src="audio/nodo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <li>Interfaz: Un punto de conexión en un nodo. Una interfaz puede ser cualquier cosa, desde un puerto de red en un servidor hasta una toma de teléfono en una pared. Una interfaz es esencialmente cualquier cosa que pueda conectarse a una red y que tenga una dirección MAC única.</li>
+                <audio controls>
+                    <source src="audio/interfaz.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <li>Protocolo: Un conjunto de reglas que gobierna cómo los datos se transmiten y reciben en una red. Los protocolos pueden ser tan simples como HTTP o tan complejos como TCP/IP. Los protocolos son esenciales para que los dispositivos en una red puedan comunicarse entre sí.</li>
+                <audio controls>
+                    <source src="audio/protocolo.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+                <li>Medio: El canal físico que se utiliza para transmitir datos a través de una red. El medio puede ser un cable, una fibra óptica, ondas de radio, etc.</li>
+                <audio controls>
+                    <source src="audio/medio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+        
+        </ul>
+</div>
+    </body>
+    </html>
+    
