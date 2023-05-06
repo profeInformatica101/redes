@@ -12,6 +12,30 @@
             font-family: 'Courier New', Courier, monospace;
         }
 
+  
+    .custom-table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+  
+    .custom-table th, .custom-table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+  
+    .custom-table th {
+      background-color: #f2f2f2;
+      font-weight: 500;
+    }
+  
+    .custom-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  
+    .custom-table tr:hover {
+      background-color: #ddd;
+    }
         .parrafo {
             max-width: 800px;
             word-wrap: break-word;
@@ -124,6 +148,110 @@
                 </audio>
         
         </ul>
+
+
+        <table class="custom-table">
+            <thead>
+              <tr>
+                <th scope="col">Término</th>
+                <th scope="col">Elementos informáticos para redes</th>
+                <th scope="col">Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Entidad -->
+              <tr>
+                <td rowspan="4">Entidad</td>
+                <td>- Usuarios</td>
+                <td>Las personas que interactúan con la red, como navegando por Internet o usando aplicaciones en red.</td>
+              </tr>
+              <tr>
+                <td>- Procesos de software</td>
+                <td>Programas o aplicaciones que se ejecutan en un dispositivo y que requieren comunicación en red, como un navegador web o un cliente de correo electrónico.</td>
+              </tr>
+              <tr>
+                <td>- Organizaciones</td>
+                <td>Empresas, instituciones educativas u otras organizaciones que administran y utilizan redes informáticas.</td>
+              </tr>
+              <tr>
+                <td>- Dispositivos de red (nodos y hosts)</td>
+                <td>Todos los dispositivos que forman parte de la red, incluidos nodos y hosts.</td>
+              </tr>
+              <!-- Nodo -->
+              <tr>
+                <td rowspan="2">Nodo</td>
+                <td>- Dispositivos finales</td>
+                <td>Dispositivos como computadoras, servidores, dispositivos móviles e impresoras que tienen direcciones IP y participan en la comunicación en red.</td>
+              </tr>
+              <tr>
+                <td>- Dispositivos de red intermedios</td>
+                <td>Equipos como enrutadores, conmutadores y puntos de acceso inalámbrico que ayudan a dirigir el tráfico de red y mantener la comunicación entre dispositivos finales.</td>
+              </tr>
+              <!-- Host -->
+              <tr>
+                <td rowspan="4">Host</td>
+                <td>- Computadoras de escritorio</td>
+                <td>PCs que se conectan a una red para acceder a recursos compartidos, como archivos e impresoras.</td>
+              </tr>
+              <tr>
+                <td>- Dispositivos móviles</td>
+                <td>Teléfonos inteligentes y tabletas que se conectan a redes Wi-Fi o celulares para acceder a Internet y aplicaciones en línea.</td>
+              </tr>
+              <tr>
+                <td>- Servidores</td>
+                <td>Dispositivos potentes que almacenan y proporcionan recursos,como sitios web, archivos y aplicaciones, a otros dispositivos en la red.</td>
+            </tr>
+            <tr>
+            <td>- Impresoras</td>
+            <td>Dispositivos que se conectan a una red para recibir trabajos de impresión de otros dispositivos, como computadoras y dispositivos móviles.</td>
+            </tr>
+            <!-- Interfaz -->
+            <tr>
+            <td rowspan="3">Interfaz</td>
+            <td>- Puertos Ethernet</td>
+            <td>Puntos de conexión físicos en dispositivos de red, como computadoras y enrutadores, que permiten la comunicación a través de cables Ethernet.</td>
+            </tr>
+            <tr>
+            <td>- Tarjetas de red inalámbricas</td>
+            <td>Componentes internos de dispositivos como computadoras portátiles y dispositivos móviles que permiten la conexión a redes inalámbricas (Wi-Fi).</td>
+            </tr>
+            <tr>
+            <td>- Puertos USB</td>
+            <td>Puertos en dispositivos que permiten la conexión de periféricos, como adaptadores de red USB, para habilitar la comunicación en red.</td>
+            </tr>
+            <!-- Protocolo -->
+            <tr>
+            <td rowspan="4">Protocolo</td>
+            <td>- Protocolo de Control de Transmisión/Protocolo de Internet (TCP/IP)</td>
+            <td>Conjunto de reglas que permite la comunicación entre dispositivos en Internet.</td>
+            </tr>
+            <tr>
+            <td>- Protocolo de transferencia de hipertexto (HTTP)</td>
+            <td>Protocolo utilizado para solicitar y transmitir páginas web entre un navegador y un servidor web.</td>
+            </tr>
+            <tr>
+            <td>- Protocolo simple de transferencia de correo (SMTP)</td>
+            <td>Protocolo utilizado para enviar correos electrónicos a través de Internet.</td>
+            </tr>
+            <tr>
+            <td>- Protocolo de configuración dinámica de host (DHCP)</td>
+            <td>Protocolo utilizado para asignar automáticamente direcciones IP a dispositivos en una red.</td>
+            </tr>
+            <!-- Medio -->
+            <tr>
+            <td rowspan="3">Medio</td>
+            <td>- Cable de par trenzado sin blindaje (UTP)</td>
+            <td>Cable comúnmente utilizado para conectar dispositivos en una red Ethernet.</td>
+            </tr>
+            <tr>
+            <td>- Fibra óptica</td>
+            <td>Medio de transmisión de alta velocidad que utiliza luz para transmitir datos a largas distancias.</td>
+            </tr>
+            <tr>
+            <td>- Ondas de radio (Wi-Fi)</td>
+            <td>Medio inalámbrico que utiliza ondas de radio para transmitir datos entre dispositivos en una red Wi-Fi.</td>
+            </tr>
+            </tbody>
 </div>
     </body>
     </html>
